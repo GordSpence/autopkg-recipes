@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
-	<key>Description</key>
-	<string>Downloads the latest version of WalkMe and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.gordspence.munki.WalkMe</string>
+	<string>local.munki.WalkMe</string>
 	<key>Input</key>
 	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>https://cdn.walkme.com/walkme-editor/latest/mac/WalkMeInstaller.dmg</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
@@ -20,6 +18,8 @@
 			<array>
 				<string>testing</string>
 			</array>
+			<key>category</key>
+			<string>Tools</string>
 			<key>description</key>
 			<string>WalkMe is a game-changing platform that instantly simplifies the online user experience.</string>
 			<key>developer</key>
@@ -32,23 +32,33 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>MinimumVersion</key>
-	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gordspence.download.WalkMe</string>
-	<key>Process</key>
-	<array>
+	<string>com.github.gordspence.munki.WalkMe</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
 		<dict>
-			<key>Arguments</key>
+			<key>com.github.gordspence.download.WalkMe</key>
 			<dict>
-				<key>pkg_path</key>
-				<string>%pathname%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>git_hash</key>
+				<string>4a534dc5a0c3e5ad8cd7e762dcb20fe27b1ea1ec</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.GordSpence.autopkg-recipes/WalkMe Ltd./WalkMe.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>4cfd614bea9c7de0049a65c25b952d13d45fdb727afcab6e37a90161812def95</string>
 			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
+			<key>com.github.gordspence.munki.WalkMe</key>
+			<dict>
+				<key>git_hash</key>
+				<string>4a534dc5a0c3e5ad8cd7e762dcb20fe27b1ea1ec</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.GordSpence.autopkg-recipes/WalkMe Ltd./WalkMe.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>8c447951f6737c1eea7e1e8568760f61735675e149cba0129ec0110712aed26e</string>
+			</dict>
 		</dict>
-	</array>
+	</dict>
 </dict>
 </plist>
