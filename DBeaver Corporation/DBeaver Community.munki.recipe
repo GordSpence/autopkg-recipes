@@ -30,6 +30,8 @@
 			<string>DBeaver Community</string>
 			<key>name</key>
 			<string>%NAME%</string>
+			<key>category</string>
+			<string>Tools</string>
 			<key>unattended_install</key>
 			<true/>
 		</dict>
