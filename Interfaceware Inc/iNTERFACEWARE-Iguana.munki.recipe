@@ -2,14 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Comment</key>
-	<string>Created with Recipe Robot v1.2.1 (https://github.com/homebysix/recipe-robot)</string>
-	<key>Description</key>
-	<string>Downloads the latest version of iNTERFACEWARE-Iguana and imports it into Munki.</string>
 	<key>Identifier</key>
-	<string>com.github.gordspence.munki.iNTERFACEWARE-Iguana</string>
+	<string>local.munki.iNTERFACEWARE-Iguana</string>
 	<key>Input</key>
 	<dict>
+		<key>DOWNLOAD_URL</key>
+		<string>http://dl.interfaceware.com/iguana/macosx/6_1_2/iguana_6_1_2_macosx_intel-64.dmg</string>
 		<key>MUNKI_REPO_SUBDIR</key>
 		<string>apps/%NAME%</string>
 		<key>NAME</key>
@@ -21,9 +19,11 @@
 				<string>testing</string>
 			</array>
 			<key>description</key>
-			<string> </string>
+			<string>The Iguana integration engine delivers a rapid, reliable, and scalable interoperability solution for healthcare organizations through the acquisition and exchange of healthcare information.</string>
 			<key>developer</key>
 			<string>Interfaceware Inc</string>
+			<key>category</key>
+			<string>Tools</string>
 			<key>display_name</key>
 			<string>iNTERFACEWARE-Iguana</string>
 			<key>name</key>
@@ -32,23 +32,33 @@
 			<true/>
 		</dict>
 	</dict>
-	<key>MinimumVersion</key>
-	<string>1.0.0</string>
 	<key>ParentRecipe</key>
-	<string>com.github.gordspence.download.iNTERFACEWARE-Iguana</string>
-	<key>Process</key>
-	<array>
+	<string>com.github.gordspence.munki.iNTERFACEWARE-Iguana</string>
+	<key>ParentRecipeTrustInfo</key>
+	<dict>
+		<key>non_core_processors</key>
+		<dict/>
+		<key>parent_recipes</key>
 		<dict>
-			<key>Arguments</key>
+			<key>com.github.gordspence.download.iNTERFACEWARE-Iguana</key>
 			<dict>
-				<key>pkg_path</key>
-				<string>%pathname%</string>
-				<key>repo_subdirectory</key>
-				<string>%MUNKI_REPO_SUBDIR%</string>
+				<key>git_hash</key>
+				<string>4a534dc5a0c3e5ad8cd7e762dcb20fe27b1ea1ec</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.GordSpence.autopkg-recipes/Interfaceware Inc/iNTERFACEWARE-Iguana.download.recipe</string>
+				<key>sha256_hash</key>
+				<string>bdd986976a776944d01eb3695800d188594b95aff8137fe2b4dbeb1e8a8c23ec</string>
 			</dict>
-			<key>Processor</key>
-			<string>MunkiImporter</string>
+			<key>com.github.gordspence.munki.iNTERFACEWARE-Iguana</key>
+			<dict>
+				<key>git_hash</key>
+				<string>4a534dc5a0c3e5ad8cd7e762dcb20fe27b1ea1ec</string>
+				<key>path</key>
+				<string>~/Library/AutoPkg/RecipeRepos/com.github.GordSpence.autopkg-recipes/Interfaceware Inc/iNTERFACEWARE-Iguana.munki.recipe</string>
+				<key>sha256_hash</key>
+				<string>24fb72c7d533c014f90b2448d2dcf4fd1dc5a48ad864216132dcc05ab3a8d6ef</string>
+			</dict>
 		</dict>
-	</array>
+	</dict>
 </dict>
 </plist>
