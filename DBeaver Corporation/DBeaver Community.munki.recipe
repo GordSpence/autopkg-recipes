@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>local.munki.DBeaver Community</string>
+	<string>com.github.gordspence.munki.DBeaver Community</string>
 	<key>Input</key>
 	<dict>
 		<key>APP_FILENAME</key>
