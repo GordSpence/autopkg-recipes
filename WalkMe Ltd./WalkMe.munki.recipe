@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Identifier</key>
-	<string>local.munki.WalkMe</string>
+	<string>com.github.gordspence.munki.WalkMe</string>
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
